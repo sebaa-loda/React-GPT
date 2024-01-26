@@ -1,6 +1,9 @@
+import { RouterProvider } from "react-router-dom"
+import { router } from "./presentation/router/router"
+
 export const ReactGPT = () => {
   return (
-    <div>ReactGPT</div>
+    <RouterProvider router={router}/>
   )
 }
 
