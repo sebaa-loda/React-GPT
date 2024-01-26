@@ -1,4 +1,6 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import { menuRoutes } from "../router/router";
+import { SidebarMenuItem } from "../components";
 
 export const DashboardLayout = () => {
   return (
@@ -12,6 +14,11 @@ export const DashboardLayout = () => {
         <div className="border-gray-700 border my-3" />
 
         {/* Opciones del menú */}
+        {
+          menuRoutes.map(option => (
+            <SidebarMenuItem key={option.to} {...option}/>
+          ))
+        }
         
       </nav>
 
